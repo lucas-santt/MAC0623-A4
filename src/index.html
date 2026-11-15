@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>three.js ar - hit test</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta property="og:title" content="three.js ar - hit test">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://threejs.org/examples/webxr_ar_hittest.html">
+		<meta property="og:image" content="https://threejs.org/examples/screenshots/webxr_ar_hittest.jpg">
+		<link type="text/css" rel="stylesheet" href="./style/style.css">
+	</head>
+	<body>
+        <div id="overlay">
+            <header class="app-header">
+                <span class="app-header__title">Experimento AR</span>
+
+                <div class="app-header__controls">
+                    <label class="setup-only" for="technique-select">Técnica</label>
+                    <select id="technique-select" class="header-select setup-only">
+                        <option value="baseline">Baseline</option>
+                        <option value="teleport">Teleport</option>
+                    </select>
+
+                    <button id="download-csv-btn" class="header-btn header-btn--green" type="button">
+                        Baixar CSV
+                    </button>
+                </div>
+            </header>
+        </div>
+
+        <script type="importmap">
+        {
+            "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+        </script>
+
+        <script type="module" src="js/main.js"></script>
+	</body>
+</html>

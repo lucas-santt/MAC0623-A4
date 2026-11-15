@@ -1,0 +1,92 @@
+.next-target-btn {
+    display: none;
+    position: fixed;
+    left: 50%;
+    bottom: calc(env(safe-area-inset-bottom, 0px) + 96px);
+    transform: translateX(-50%);
+    width: 110px;
+    height: 110px;
+    border: none;
+    border-radius: 12px;
+    background: #1b5e20;
+    color: #e8f5e9;
+    font-size: 56px;
+    line-height: 1;
+    z-index: 1000;
+    touch-action: manipulation;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.next-target-btn.visible {
+    display: block;
+}
+
+
+
+
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(44px + env(safe-area-inset-top, 0px));
+    padding: env(safe-area-inset-top, 0px) 12px 0;
+    background: #1a1a1a;
+    border-bottom: 1px solid #333;
+    color: #eee;
+    font-family: system-ui, sans-serif;
+    box-sizing: border-box;
+}
+
+.app-header__title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+.app-header__controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.app-header label {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.app-header .header-select,
+.app-header .header-btn {
+    height: 28px;
+    padding: 0 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    text-transform: none;
+}
+
+.app-header .header-select {
+    background: #2b2b2b;
+    color: #eee;
+    border: 1px solid #444;
+}
+
+.app-header .header-btn--green {
+    background: #2e7d32;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.app-header .header-btn--green:hover,
+.app-header .header-btn--green:active {
+    background: #388e3c;
+}
+
+.ar-only { display: none; }
+body.in-ar .ar-only { display: inline-block; }
+body.in-ar .setup-only { display: none; }
